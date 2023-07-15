@@ -4,8 +4,10 @@ function volume_sphere() {
 	const vol = 4 / 3 * Math.PI * radius ** 3;
 	// console.log(radius);
 	// console.log(vol);
-
+	document.getElementById('MyForm').addEventListener("submit", function(event){
+  event.preventDefault()
+});
 	document.getElementById('volume').value = vol;
 } 
 
-window.onload = document.getElementById('MyForm').onsubmit = volume_sphere;
+document.getElementById('MyForm').onsubmit = volume_sphere;
