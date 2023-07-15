@@ -1,13 +1,13 @@
-function volume_sphere() {
+function volume_sphere(e) {
     //Write your code here
+	e.preventDefault();
 	const radius = +document.getElementById('radius').value;
 	const vol = 4 / 3 * Math.PI * radius ** 3;
-	// console.log(radius);
-	// console.log(vol);
-	document.getElementById('MyForm').addEventListener("submit", function(event){
-  event.preventDefault()
-});
-	document.getElementById('volume').value = vol;
+
+	document.getElementById('volume').value = volume.toFixed(4);
 } 
 
-document.getElementById('MyForm').onsubmit = volume_sphere;
+
+window.onload = function() {
+  document.getElementById('MyForm').addEventListener('submit', volume_sphere);
+};
